@@ -4,26 +4,26 @@
   xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <message name="getBMIRequest">
-    <part name="weight" type="xsd:float"/>
-    <part name="height" type="xsd:float"/>
+  <message name="getSubtractionRequest">
+    <part name="x" type="xsd:float"/>
+    <part name="y" type="xsd:float"/>
   </message>
 
-  <message name="getBMIResponse">
-    <part name="bmi" type="xsd:float"/>
+  <message name="getSubtractionResponse">
+    <part name="result" type="xsd:float"/>
   </message>
 
   <portType name="Hello_PortType">
-    <operation name="calculateBMI">
-      <input message="tns:getBMIRequest"/>
-      <output message="tns:getBMIResponse"/>
+    <operation name="subtractionCalculator">
+      <input message="tns:getSubtractionRequest"/>
+      <output message="tns:getSubtractionResponse"/>
     </operation>
   </portType>
 
   <binding name="Hello_Binding" type="tns:Hello_PortType">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <operation name="calculateBMI">
-      <soap:operation soapAction="calculateBMI"/>
+    <operation name="subtractionCalculator">
+      <soap:operation soapAction="subtractionCalculator"/>
       <input>
         <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:examples:helloservice" use="encoded"/>
       </input>
@@ -33,10 +33,10 @@
     </operation>
   </binding>
 
-  <service name="BMI_Service">
+  <service name="Subtraction_Service">
     <documentation>WSDL File for HelloService</documentation>
-    <port binding="tns:Hello_Binding" name="BMI_Port">
-      <soap:address location="http://localhost:3030/bmicalculator/" />
+    <port binding="tns:Hello_Binding" name="Subtraction_Port">
+      <soap:address location="http://localhost:3030/subtraction/" />
     </port>
   </service>
 </definitions>
