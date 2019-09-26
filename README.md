@@ -17,8 +17,8 @@ The server implementation is done with ExpressJS(https://expressjs.com/), the SO
 Installation instructions:
 
 node: (https://nodejs.org/en/download/)
-npm i express
-npm i soap
+`npm i express`
+`npm i soap`
 
 
 Running the application in full power:
