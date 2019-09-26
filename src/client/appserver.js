@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
       });
   });
 
+app.get('/client', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+})
+
 const server = app.listen(5000, function() {
     const host = '127.0.0.1';
     const port = server.address().port;

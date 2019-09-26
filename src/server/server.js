@@ -1,12 +1,6 @@
 const soap = require('soap');
 const express = require('express');
 const app = express();
-/**
- * this is remote service defined in this file, that can be accessed by clients, who will supply args
- * response is returned to the calling client
- * our service calculates bmi by dividing weight in kilograms by square of height in metres
- */
-
 
 app.get('/api/v1/addition', (req, res) => {
   res.status(200).send({
