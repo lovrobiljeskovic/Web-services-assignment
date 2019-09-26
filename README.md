@@ -24,4 +24,4 @@ node: (https://nodejs.org/en/download/)
 Running the application in full power:
 
 cd your way into server folder and run `node server.js`
-cd your way into client folder and run `node appserver.js` & `node client.js`
+cd your way into client folder and run `node appserver.js`
